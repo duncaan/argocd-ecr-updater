@@ -1,0 +1,8 @@
+apscheduler==3.9.1
+boto3==1.26.2
+bottle==0.12.23
+kubernetes==25.3.0
+prometheus_client==0.15.0
+PyYAML==6.0
+six==1.16.0
+terrascript==0.6.1

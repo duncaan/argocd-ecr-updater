@@ -1,14 +1,11 @@
-FROM python:3.9-slim
+FROM python:3.10-slim
 LABEL "app"="argocd-ecr-updater"
 ENV PYTHONUNBUFFERED=0
 
 WORKDIR /app
 
-RUN pip install pipenv
-
-
-COPY Pipfile* .
-RUN pipenv install --system --deploy
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
 COPY argocd-ecr-updater.py .
 
